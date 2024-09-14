@@ -1,46 +1,131 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Credit Card</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./style.css">
-    </link>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .credit-card {
+            perspective: 1000px;
+        }
+
+        .card {
+            width: 400px;
+            height: 250px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #212121, #333);
+            color: white;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+            transform-style: preserve-3d;
+        }
+
+        .card-logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .card-chip {
+            width: 50px;
+            height: 35px;
+            background: #ccc;
+            border-radius: 5px;
+        }
+
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+
+        .bubble:nth-child(1) {
+            width: 200px;
+            height: 200px;
+            bottom: 0;
+            right: 20%;
+        }
+
+        .bubble:nth-child(2) {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: 40%;
+        }
+    </style>
 </head>
 
-<body>
-    <section class="p-20 space-y-2">
-        <div class="flex justify-between items-center">
-            <div class="flex space-x-4 items-center">
-                <p class="text-base">List with description</p>
-                <p class="text-sm px-2 py-1 bg-gray-100 rounded-md">Preview</p>
-            </div>
-            <a class="cursor-pointer text-sm text-blue-500 font-medium hover:text-blue-700">Get the code →</a>
-        </div>
-        <div class="flex items-center flex-col space-y-4 py-10 w-full border">
-            <div class="flex items-start space-x-2">
-                <label class="container1">
-                    <input type="checkbox" class="bg-green-700 checked:text-green-700 w-5 h-5" />
-                    <span class="checkmark"></span>
-                </label>
-                <div>
-                    <p class="font-medium text-dark">Comments</p>
-                    <p class="text-gray-600">Get notified when someones posts a comment on a posting.</p>
+<body class="bg-black flex justify-center items-center min-h-screen relative">
+
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+    <div class="credit-card">
+        <div id="card" class="card relative">
+            <div class="text-xl font-semibold">monobank</div>
+            <div class="flex justify-between">
+                <div class="card-chip mt-6"></div>
+
+                <div class="mt-8">
+                    <p class="tracking-widest text-lg">**** **** **** 8900</p>
                 </div>
             </div>
-            <div class="flex items-start space-x-2">
-                <label class="container1">
-                    <input type="checkbox" class="bg-green-700 checked:text-green-700 w-5 h-5" />
-                    <span class="checkmark"></span>
-                </label>
-                <div>
-                    <p class="font-medium text-dark">Comments</p>
-                    <p class="text-gray-600">Get notified when someones posts a comment on a posting.</p>
-                </div>
+
+            <div class="mt-4">
+                <p class="text-xs text-gray-400">CARD HOLDER</p>
+                <p class="text-lg">LILLY BLOOM</p>
+            </div>
+
+            <div class="absolute bottom-4 left-4">
+                <p class="text-xs text-gray-400">EXPIRES</p>
+                <p class="text-lg">12/25</p>
+            </div>
+
+            <div class="card-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" alt="Mastercard"
+                    class="w-12">
             </div>
         </div>
-    </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        gsap.to("#card", {
+            duration: 5,
+            rotationY: 360,
+            rotationX: 35,
+            repeat: -1,
+            ease: "power2.inOut"
+        });
+
+        // Floating effect for bubbles
+        gsap.to(".bubble:nth-child(1)", {
+            duration: 6,
+            y: -100,
+            x: -50,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut"
+        });
+
+        gsap.to(".bubble:nth-child(2)", {
+            duration: 8,
+            y: 100,
+            x: 50,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut"
+        });
+    </script>
 </body>
 
 </html>
