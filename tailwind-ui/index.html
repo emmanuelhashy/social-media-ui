@@ -6,62 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animated Credit Card</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .credit-card {
-            perspective: 1000px;
-        }
-
-        .card {
-            width: 400px;
-            height: 250px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, #212121, #333);
-            color: white;
-            padding: 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-            transform-style: preserve-3d;
-        }
-
-        .card-logo {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        .card-chip {
-            width: 50px;
-            height: 35px;
-            background: #ccc;
-            border-radius: 5px;
-        }
-
-        .bubble {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            opacity: 0.6;
-        }
-
-        .bubble:nth-child(1) {
-            width: 200px;
-            height: 200px;
-            bottom: 0;
-            right: 20%;
-        }
-
-        .bubble:nth-child(2) {
-            width: 300px;
-            height: 300px;
-            top: 10%;
-            left: 40%;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body class="bg-black flex justify-center items-center min-h-screen relative">
@@ -107,24 +52,27 @@
             ease: "power2.inOut"
         });
 
-        // Floating effect for bubbles
-        gsap.to(".bubble:nth-child(1)", {
-            duration: 6,
-            y: -100,
-            x: -50,
-            repeat: -1,
-            yoyo: true,
-            ease: "power1.inOut"
-        });
+        function moveBubble(selector, duration, x, y, z) {
+            gsap.to(selector, {
+                duration: duration,
+                x: x,
+                y: y,
+                z: z,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.inOut",
+                onRepeat: function() {
+                    gsap.to(selector, {
+                        x: Math.random() * 200 - 100,
+                        y: Math.random() * 200 - 100,
+                        z: Math.random() * 100 - 50,
+                    });
+                }
+            });
+        }
 
-        gsap.to(".bubble:nth-child(2)", {
-            duration: 8,
-            y: 100,
-            x: 50,
-            repeat: -1,
-            yoyo: true,
-            ease: "power1.inOut"
-        });
+        moveBubble(".bubble:nth-child(1)", 6, 100, -150, 40);
+        moveBubble(".bubble:nth-child(2)", 8, -120, 120, -40);
     </script>
 </body>
 
