@@ -1,0 +1,38 @@
+body {
+  /* background-color: #111; */
+  color: #555;
+  font-size: 1.1em;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.container {
+  margin: 50px auto;
+  max-width: 640px;
+  height: 400px;
+  border: 1px solid #333;
+}
+
+img {
+  margin: 10px auto;
+  display: block;
+  width: 500px;
+  height: 100%;
+  -webkit-mask-image: url(https://tympanus.net/codrops-playground/assets/images/cssref/properties/mask-position/mask-image.png);
+  mask-image: url(https://tympanus.net/codrops-playground/assets/images/cssref/properties/mask-position/mask-image.png);
+  -webkit-mask-position: top left;
+  mask-position: top left;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 450px 100%;;
+  mask-size: 450px 100%;
+}
+
+img {
+  display: block;
+  width: 500px;
+  height: 100%;
+  mask-position: top left;
+  mask-repeat: no-repeat;
+  mask-size: 450px 100%;
+  mask-image: url(https://tympanus.net/codrops-playground/assets/images/cssref/properties/mask-position/mask-image.png);
+}
