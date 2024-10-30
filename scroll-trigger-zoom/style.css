@@ -12,11 +12,6 @@ section.spacer {
   justify-content: center;
 }
 
-/* section.image-unmask {
-  height: 100vh;
-  overflow: hidden;
-} */
-
 .inner {
   margin: 50px;
   padding: 50px;
