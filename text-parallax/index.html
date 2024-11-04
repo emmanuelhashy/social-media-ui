@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    </link>
+</head>
+
+<body>
+    <body>
+
+		<div 	data-0="opacity: 1;" 
+				data-200="opacity: 0;">How about scroll down?</div>
+
+	<div  data-200="opacity: 0;" 
+				data-400="opacity: 1.5;" 
+				data-600="opacity: 0;">Thanks! Keep scrolling..</div>
+
+	<div  data-800="opacity: 0;" 
+				data-1000="opacity: 1.5; " 
+				data-2000="" 
+				data-2200="opacity: 0;">Let me tell you something about myself ..</div>
+
+	<div  data-2400="opacity: 0;top: 50%;" 
+				data-2600="opacity: 1.5; " 
+				data-3000="" 
+				data-3200="opacity: 0; top: 70%;">I am a briliant artist!</div>
+
+	<div  data-3400="opacity: 0;top: 0%;" 
+				data-3600="opacity: 1.5; top: 50%;" 
+				data-4000="margin-left: 0px;" 
+				data-4200="opacity: 0; margin-left: -200px;">I know how to draw:</div>
+	
+
+		<div 
+			data-4400="opacity: 0;" 
+			data-4600="opacity: 1; margin-top: 0px;"
+			data-4800="margin-top: -50px;" >Looking forward to hearing from you!</div>
+		<div 
+			data-5000="opacity: 0; z-index: -10;"
+			data-5200="opacity: 1; margin-top: 0px; z-index: 10;"
+			>You can email me at: <a href="mailto:emmanuelhashy@gmail.com">emmanuelhashy@gmail.com</a></div>
+		<div 
+			data-5400="opacity: 0; margin-top: 25px;z-index:0;"
+			data-5600="opacity: 1; margin-top: 50px;z-index:10;"
+			>and check my portfolio <a target="_blank" href="https://emmanuelhashy.github.io">site</a></div>
+
+</body>
+<script>
+    $(function(){
+		skrollr.init({
+		forceHeight: true
+	});
+});
+</script>
+</html>
