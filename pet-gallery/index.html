@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    </link>
+    <script src="https://assets.codepen.io/16327/gsap-latest-beta.min.js?v=cachebust"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=cachebust"></script>
+    <script src="https://assets.codepen.io/16327/ScrollSmoother.min.js?v=cachebust"></script>
+    <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">Zuma Pets</h1>
+        <button class="menu">
+          <span></span>
+        </button>
+      </header>
+      <main id="wrapper">
+        <div id="content" class="o-wrapper">
+          <ul class="gallery">
+            <li class="image">
+              <img src="https://images.unsplash.com/photo-1601758063890-1167f394febb?q=80&w=2902&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+            <li class="image">
+                <img src="https://images.unsplash.com/photo-1518887499460-71d222eed89d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+            <li class="image">
+              <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?q=80&w=700&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+            <li class="image">
+              <img src="https://images.unsplash.com/photo-1488740304459-45c4277e7daf?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+            <li class="image">
+              <img src="https://images.unsplash.com/photo-1518288774672-b94e808873ff?q=80&w=2718&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+            <li class="image">
+              <img src="https://images.unsplash.com/photo-1518815068914-038920b6f0c6?q=80&w=2852&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+            <li class="image">
+              <img src="https://images.unsplash.com/photo-1533152162573-93ad94eb20f6?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+            <li class="image">
+              <img src="https://images.unsplash.com/photo-1548366086-7f1b76106622?q=80&w=2776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+            <li class="image">
+              <img src="https://images.unsplash.com/photo-1501472193205-56ffb66400f0?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+            <li class="image">
+              <img src="https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?q=80&w=2694&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+            <li class="image">
+              <img src="https://images.unsplash.com/photo-1512483652399-7a1f99aa0dd3?q=80&w=2952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+            <li class="image">
+              <img src="https://images.unsplash.com/photo-1518887371124-412923b6ccff?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+            <li class="image">
+              <img src="https://images.unsplash.com/photo-1521055447672-2fa9530db421?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+            <li class="image">
+              <img src="https://images.unsplash.com/photo-1629740067905-bd3f515aa739?q=80&w=2667&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+            <li class="image">
+              <img src="https://images.unsplash.com/photo-1524014998093-b1010ae76d63?q=80&w=2934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+            <li class="image">
+              <img src="https://images.unsplash.com/photo-1543556153-6ca655a62cb8?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+            <li class="image">
+              <img src="https://images.unsplash.com/photo-1526346093155-a601c2cbe917?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+            <li class="image">
+              <img src="https://images.unsplash.com/photo-1553499057-2e1b15f16f8c?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </li>
+          </ul>
+          <footer>
+            <h2 class="end">That's all folks</h2>
+          </footer>
+        </div>
+      </main>
+</body>
+<script src="./main.js"></script>
+</html>
